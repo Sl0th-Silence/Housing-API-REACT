@@ -35,17 +35,17 @@ server.get('/houses', async (request, response) => {
     const collection = database.collection("Houses_One");
 
     const cursor = collection.find({});
-    let userList = [];
+    let houseList = [];
 
     for await (const doc of cursor){ // Clean up so only the following information goes to the site. 
-      userList.push({
+      houseList.push({
         address: doc.Address,
         price: doc.Price,
         type: doc.Property_Type,
         image: doc.Img_Link
       });
     }
-    response.json(userList);
+    response.json(houseList);
 
   }catch (error) {
     console.error(error);

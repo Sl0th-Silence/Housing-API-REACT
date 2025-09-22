@@ -6,7 +6,6 @@ function App() {
   return (
     <>
       <h1 className="title">Kingston Housing Sales</h1>
-      <h2 className='author'>Jay Mills</h2>
       <HouseList />
     </>
   )
