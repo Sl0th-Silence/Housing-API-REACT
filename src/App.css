@@ -12,3 +12,29 @@
 .read-the-docs {
   color: #888;
 }
+
+.title{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-decoration: underline;
+}
+
+.author{
+  text-align: right;
+  font-variant: small-caps;
+  letter-spacing: 0.5px;
+  line-height: 0px;
+}
+
+.houses-card ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.each-house{
+  margin: auto;
+  padding: 10px;
+}
+
+ul{
+  list-style-type: none;
+}

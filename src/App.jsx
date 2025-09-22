@@ -1,11 +1,13 @@
 import './App.css'
-import HouseCard from './components/houseCard'
+import HouseList from './components/importData'
+import Greeting from './components/greeting'
 
 function App() {
-
   return (
     <>
-      <HouseCard address="12345"/>
+      <h1 className="title">Kingston Housing Sales</h1>
+      <h2 className='author'>Jay Mills</h2>
+      <HouseList />
     </>
   )
 }
