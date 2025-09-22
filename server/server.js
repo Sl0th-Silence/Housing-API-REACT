@@ -3,6 +3,7 @@
 import express from "express"
 import dotenv from "dotenv";
 import cors from "cors";
+import { MongoClient } from "mongodb";
 
 dotenv.config();
 
@@ -13,35 +14,28 @@ const port = 3000;
 //Cors error handling
 server.use(cors());
 
-//Connect to database
-import { MongoClient } from "mongodb";
+  //Connect to database
 const connectionString = process.env.URI;
-if(!connectionString)
-{
-    console.log("No Connection String")
-}
 const client = new MongoClient(connectionString);
 await client.connect();
 
 //Start server
 server.listen(port, () => {
-  console.log(`Server is listening on port ${port}`);
-})
+console.log(`Server is listening on port ${port}`);
+});
 
-//Home
+// -------------------- ROUTES ------------------------ //
 server.get('/', (request, response) => {
-      response.send("Hey");
+      response.send("Testing Home Page");
     });
 
 server.get('/houses', async (request, response) => {
-  
   try{
     const database = client.db("KingstonHouses");
     const collection = database.collection("Houses_One");
 
     const cursor = collection.find({});
     let userList = [];
-    let counter = 0;
 
     for await (const doc of cursor){ // Clean up so only the following information goes to the site. 
       userList.push({
@@ -50,7 +44,6 @@ server.get('/houses', async (request, response) => {
         type: doc.Property_Type,
         image: doc.Img_Link
       });
-      counter+=1;
     }
     response.json(userList);
 
@@ -61,6 +54,3 @@ server.get('/houses', async (request, response) => {
 })
 
 //ToDo
-// Connect to database and organize information
-
-//After connecting, we will try and iterate through the db
