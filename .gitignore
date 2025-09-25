@@ -22,4 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
 /server
+=======
+server/
+>>>>>>> 23aa3cbf7bc05c0ef7d817e2a29849676578e69a
