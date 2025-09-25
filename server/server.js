@@ -39,6 +39,7 @@ server.get('/houses', async (request, response) => {
 
     for await (const doc of cursor){ // Clean up so only the following information goes to the site. 
       houseList.push({
+        id: doc._id,
         address: doc.Address,
         price: doc.Price,
         type: doc.Property_Type,

@@ -28,9 +28,10 @@ function HouseList() {
     return (
         <div className="houses-card">
             <ul>
-                {houses.map((house, index) => {
+                {houses.map((house) => {
                     return (
-                        <li className="each-house" key={index}>
+                        <li className="each-house" 
+                            key={house.id}>
                             <img src={house.image} alt="" /> <br />
                             Address: {house.address} <br/>
                             Price: {house.price} <br />

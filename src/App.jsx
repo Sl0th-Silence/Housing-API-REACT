@@ -1,6 +1,5 @@
 import './App.css'
 import HouseList from './components/importData'
-import Greeting from './components/greeting'
 
 function App() {
   return (
