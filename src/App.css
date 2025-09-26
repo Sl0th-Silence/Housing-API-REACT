@@ -31,3 +31,18 @@
 ul{
   list-style-type: none;
 }
+
+.pagination{
+  padding: 10px;
+}
+
+.pagination button{
+  padding: 10px;
+  border: red solid;
+
+}
+
+.pagination span{
+  font-weight: 100;
+  padding: 10px;
+}

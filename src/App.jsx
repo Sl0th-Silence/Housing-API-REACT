@@ -1,5 +1,5 @@
 import './App.css'
-import HouseList from './components/importData'
+import HouseList from './components/houseCard'
 
 function App() {
   return (
