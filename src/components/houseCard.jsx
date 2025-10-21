@@ -3,7 +3,6 @@ import React, {useEffect, useState} from "react";
 //Function HouseList which gathers ALL the data
 export default function HouseList() {
     //This sets houses to the [] empty array
-    //And is uses the function setHouses LATER to update the array!? cool!
     const [houses, setHouses] = useState([]);
     const [loading, setLoading] = useState(true); //This sets "Loading" to true while its loading and sets to false later
 
@@ -22,8 +21,6 @@ export default function HouseList() {
                 setLoading(false);
             } 
         };
-
-
 
         fetchHouses();
     }, []);
