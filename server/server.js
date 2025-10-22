@@ -11,7 +11,6 @@ const server = express();
 const port = 3000;
 
 //Cors error handling
-//Used for when you are launching both an express and react server
 server.use(cors());
 
   //Connect to database
