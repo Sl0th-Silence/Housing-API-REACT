@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 #dot env setup
 load_dotenv()
 
-mongoURI = os.getenv("MONGO_URI")
+mongoURI = os.getenv("MONGO_DBI")
 # -- Open Database -- #
 
 client = MongoClient(mongoURI)

@@ -49,7 +49,6 @@ server.get("/houses", async (request, response) => {
       image: doc.Img_Link,
     }));
     response.json(houseList);
-    console.log("Success"); //Response worked
   } catch (error) {
     console.error(error);
     response.status(500).send("Error retrieving data");

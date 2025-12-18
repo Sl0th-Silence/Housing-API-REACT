@@ -9,9 +9,9 @@ import os
 from dotenv import load_dotenv
 
 #dot env setup
-load_dotenv()
+load_dotenv("C:\\Users\\Jay_M\\Desktop\\Summer Work\\Housing-API-REACT\\backend\\.env")
 
-mongoURI = os.getenv("MONGO_URI")
+mongoURI = os.getenv("MONGO_DBI")
 
 # -------- HOUSEKEEPING ---------- #
 addresses = []
