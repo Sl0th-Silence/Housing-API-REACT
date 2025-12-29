@@ -1,7 +1,7 @@
 {
   "homepage": "https://sl0th-silence.github.io/Housing-API-REACT/",
   "name": "react-houses",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
