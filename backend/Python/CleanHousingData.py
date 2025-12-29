@@ -3,13 +3,13 @@ from pymongo import MongoClient
 import os
 from dotenv import load_dotenv
 
-# -- Load dotenv file
-load_dotenv(dotenv_path="server\\Python\\.venv\\.env")
-# -- Mongo Housekeeping -- #
-MongoURL = os.getenv("MONGO_URL")
-client = MongoClient(MongoURL)
+#dot env setup
+load_dotenv("C:\\Users\\Jay_M\\Desktop\\Summer Work\\Housing-API-REACT\\backend\\.env")
+
+mongoURI = os.getenv("MONGO_DBI")
+client = MongoClient(mongoURI)
 db = client.KingstonHouses #Refer to DB. If non-existent, one is created
-houses = db.Houses_One_2025_SEPT_25 #Refer to collections. Same as above
+houses = db.Houses_One #Refer to collections. Same as above
 data = houses.find({})
 
 # -- General Housekeeping -- #

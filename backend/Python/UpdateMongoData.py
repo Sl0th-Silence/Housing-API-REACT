@@ -5,14 +5,13 @@ import os
 from dotenv import load_dotenv
 
 #dot env setup
-load_dotenv()
+load_dotenv("C:\\Users\\Jay_M\\Desktop\\Summer Work\\Housing-API-REACT\\backend\\.env")
 
 mongoURI = os.getenv("MONGO_DBI")
-# -- Open Database -- #
 
 client = MongoClient(mongoURI)
 db = client.KingstonHouses #Refer to DB. If non existant, one is created
-houses = db.Rentals #Refer to collections. Same as above
+houses = db.Houses_One #Refer to collections. Same as above
 
 def clean_whitespace(value): # -- Pulled from stack. New to re -- #
     if isinstance(value, str):
