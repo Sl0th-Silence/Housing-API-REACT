@@ -3,18 +3,18 @@ import axios from "axios";
 
 // Function HouseList which gathers ALL the data
 export default function MainApp() {
-  // State
+  // States
   const [houses, setHouses] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const [currentPage, setCurrentPage] = useState(1);
+
   const itemsPerPage = 20;
 
+  //For fetching and saving the data from the server
   useEffect(() => {
     async function fetchHouses() {
       try {
         const response = await axios.get("http://localhost:3000/houses");
-        console.log(response.data);
         setHouses(response.data);
       } catch (error) {
         console.error("error fetching houses:", error);
@@ -26,6 +26,7 @@ export default function MainApp() {
     fetchHouses();
   }, []);
 
+  //Show loading text
   if (loading) return <p>Loading houses...</p>;
 
   // Pagination calculations
